@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The Elephant, our hero.
+ * The elephant, our hero.
  * 
  * @author Felix
  * @version December 2022
@@ -15,6 +15,28 @@ public class Elephant extends Actor
     public void act() 
     {
         // Add your action code here.
-        move(1);
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-1);
+        }
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            move(1);
+        }
+        
+        // Remove elephant if fish eats it
+        eat();
     }    
+    /**
+     * Eat the apple and spawn new apple if an apple is eaten.
+     */
+    public void eat()
+    {
+        if(isTouching(Apple.class))
+        {
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple(); 
+        }
+    }
 }
