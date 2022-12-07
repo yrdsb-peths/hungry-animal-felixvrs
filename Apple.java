@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Food for our elephant. 
+ * Food for our elephant.
  * 
- * @author Felix 
+ * @author Felix
  * @version December 2022
  */
 public class Apple extends Actor
@@ -12,9 +12,9 @@ public class Apple extends Actor
      * Act - do whatever the Apple wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
         // Add your action code here.
         setLocation(getX(), getY() + 1);
-    }    
+    }
 }
