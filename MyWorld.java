@@ -30,6 +30,9 @@ public class MyWorld extends World
         
         // Create the apple
         createApple();
+        
+        // Create the banana
+        createBanana();
     }
     
     /**
@@ -55,6 +58,12 @@ public class MyWorld extends World
         }
     }
     
+    public void decreaseScore()
+    {
+        score--;
+        scoreLabel.setValue(score);
+    }
+    
     /**
      * Create a new apple at random location at top of screen
      */
@@ -65,5 +74,14 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple, x, y);
+    }
+    
+    public void createBanana()
+    {
+        Banana banana = new Banana();
+        banana.setSpeed(level);
+        int xB = Greenfoot.getRandomNumber(600);
+        int yB = 0;
+        addObject(banana, xB, yB);
     }
 }

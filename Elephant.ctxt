@@ -11,4 +11,6 @@ comment3.target=void\ act()
 comment4.params=
 comment4.target=void\ eat()
 comment4.text=\r\n\ Eat\ the\ apple\ and\ spawn\ a\ new\ apple\ if\ apple\ is\ eaten\r\n
-numComments=5
+comment5.params=
+comment5.target=void\ eatBanana()
+numComments=6
